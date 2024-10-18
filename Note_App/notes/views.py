@@ -5,7 +5,7 @@ from .forms import NoteForm
 
 def note_list(request):
     notes = Note.objects.all()
-    return render(redirect, 'note_list.html', {'notes': notes})
+    return render(request, 'note_list.html', {'notes': notes})
 
 def add_note(request):
     if request.method == 'POST':
